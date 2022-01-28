@@ -1,0 +1,3 @@
+start:
+    printout "Hello World"
+    break
