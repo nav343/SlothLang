@@ -5,7 +5,8 @@ class SLexer:
         self.keywords = [
             'printout',
             'break',
-            'skip'
+            'skip',
+            'inp'
         ]
     
     def tokenizer(self):

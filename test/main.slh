@@ -1,11 +1,6 @@
-
 start:
-    printout "Hello World"
-    skip to_this
-    printout "we are back"
-    break
-    printout "This wont show, sed."
+    printout "Hello"
+    skip hi
 
-to_this:
-    printout "lets go somewhere"
-        
+hi:
+    inp "Enter something "

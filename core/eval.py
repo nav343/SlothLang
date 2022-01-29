@@ -22,11 +22,17 @@ class SEval:
             self.stop()
         elif loc[0] == "skip":
             self.skip(loc[1])
+        elif loc[0] == "inp":
+            self.inp(loc[1])
 
     def skip(self, v):
         for node in self.AST:
             if v in node:
                 self.run(node[v])
+
+    def inp(self, t):
+        text = input(t)
+        print(text)
     
     def echo(self,t):
         print(t)

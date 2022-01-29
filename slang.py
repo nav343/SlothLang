@@ -28,6 +28,10 @@ try:
     if __name__ == "__main__":
         main()
 
+except KeyboardInterrupt:
+    print(Fore.RED + "\nKeyboard Interruption found. Exiting...")
+    print(Style.RESET_ALL)
+
 except Exception:
     print(Fore.RED + "An Error occurred.")
     print(Fore.RED + "File Executed with code 1")

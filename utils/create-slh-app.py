@@ -26,7 +26,13 @@ with console.status("[bold green]Creating slh project...") as status:
         f.write('''
 start:
     printout "Hello World"
+    skip to_this
+    printout "We are back"
     break
+    printout "This wont show, sed :(."
+
+to_this:
+    printout "Lets go somewhere"
         ''')
     while tasks:
         task = tasks.pop(0)
