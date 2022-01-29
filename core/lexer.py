@@ -3,7 +3,9 @@ class SLexer:
         self.data     = data
         self.token    = []
         self.keywords = [
-            'printout'
+            'printout',
+            'break',
+            'skip'
         ]
     
     def tokenizer(self):
@@ -28,6 +30,11 @@ class SLexer:
                     self.token.append({'id': 'keyword', 'value': ''.join(temp)})
                     temp = []
                 
+                elif l == "\n":
+                    if len(temp) > 0:
+                        self.token.append({'id': "atom", 'value': ''.join(temp)})
+                        temp = []
+                        
                 elif l == ' ' and tempid != 'char':
                     continue
                 else:

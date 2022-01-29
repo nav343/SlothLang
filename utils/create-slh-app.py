@@ -23,7 +23,11 @@ with console.status("[bold green]Creating slh project...") as status:
         print(Style.RESET_ALL)
         quit()
     with open(f"{arg.name}/main.slh", 'w') as f:
-        f.write("printout 'Hello World'")
+        f.write('''
+start:
+    printout "Hello World"
+    break
+        ''')
     while tasks:
         task = tasks.pop(0)
         sleep(1)

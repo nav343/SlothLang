@@ -33,7 +33,7 @@ class SParser:
                         self.add_node(parent, t)
                         collect = False
 
-            elif token['id'] == 'char':
+            elif token['id'] == 'char' or token['id'] == 'atom':
                 if collect == False:
                     saved = token
                     collect = True

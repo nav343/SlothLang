@@ -1,3 +1,11 @@
+
 start:
     printout "Hello World"
+    skip to_this
+    printout "we are back"
     break
+    printout "This wont show, sed."
+
+to_this:
+    printout "lets go somewhere"
+        
