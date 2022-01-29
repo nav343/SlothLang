@@ -1,6 +1,2 @@
 start:
-    printout "Hello"
-    skip hi
-
-hi:
-    inp "Enter something "
+    printout "Your are a nice man"
